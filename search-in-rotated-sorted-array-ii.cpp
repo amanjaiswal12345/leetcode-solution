@@ -10,16 +10,7 @@ public:
             while(r < l && nums[r] == nums[r-1])
                 r--;
             
-            /*
-                You need to do what I did above because you'll fail in case like
-                [1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1]
-                2
-                Here, the nums[mid] <= nums[r] and
-                and we will cut down the right half but our pivot lies there
-                So, make it a RULE, whenever there are duplicate elements and you need to to something
-                like Binary Search, you need to ignore duplicates like done above
-                Similar Qn : "Smallest element in a rotated sorted array with duplicates"
-            */
+
             int mid = l + (r-l)/2;
             
             if(nums[mid] <= nums[r]) { //sorted part
